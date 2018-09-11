@@ -29,6 +29,7 @@ home.addEventListener('click', handleClick);
 
 
 //Fetch Everything
+//var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 fetch(TRAVELERS_URL).then(resp => resp.json()).then(data => createElements(data[0]));
 
 
