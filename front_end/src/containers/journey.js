@@ -13,7 +13,7 @@ class Journey {
 	    this.pics = pics;
 	    this.overview = overview;
 	    this.traveler_id = traveler_id;
-	    this.locations = createLocations(locations);
+	    this.locations = this.createLocations(locations);
 	    Journey.all.push(this)
 	  }
 

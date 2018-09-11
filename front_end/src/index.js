@@ -29,12 +29,14 @@ home.addEventListener('click', handleClick);
 
 
 //Fetch Everything
-fetch().then(resp => resp.json()).then(data => createElements(data));
+fetch(TRAVELERS_URL).then(resp => resp.json()).then(data => createElements(data[0]));
 
 
 function createElements(data){
+	
+	traveler = new Traveler(data);
+	traveler.attachToDom();
 	debugger
-	//traveler = new Traveler(data);
 	//return traveler.attachToDom();
 }
 

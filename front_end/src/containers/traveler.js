@@ -4,14 +4,14 @@ class Traveler {
 	    id,
 	    name,
 	    age,
-	    picture_url,
+	    pictureUrl,
 	    journeys = []
 	  } = {}) {
 	  	this.id = id;
 	    this.name = name;
 	    this.age = age;
-	    this.picture_url = picture_url;
-	    this.journeys = createJourneys(journeys);
+	    this.picture_url = pictureUrl;
+	    this.journeys = this.createJourneys(journeys);
 	    Traveler.all.push(this)
 	}
 
