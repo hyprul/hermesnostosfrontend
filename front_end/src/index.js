@@ -35,8 +35,11 @@ fetch(TRAVELERS_URL).then(resp => resp.json()).then(data => createElements(data[
 function createElements(data){
 	
 	traveler = new Traveler(data);
+	traveler.picture_url = "https://static.fashionbeans.com/wp-content/uploads/2015/03/dondm.jpg"
+	traveler.name = "Don Draper"
+	//debugger
 	traveler.attachToDom();
-	debugger
+	//debugger
 	//return traveler.attachToDom();
 }
 

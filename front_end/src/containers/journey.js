@@ -27,7 +27,18 @@ class Journey {
 	  }
 
 	  render(){
+	  	//debugger
 
+	  	let journeyid = `test${this.id}tab`
+	  	//debugger
+
+	  	if(journeyid){
+		  	const journey = document.getElementById(journeyid);
+		  	//debugger
+		  	journey.innerHTML = `<a href="#test${this.id}" style="color:black">${this.name}</a>`
+		  	
+		  	//debugger
+	  	}
 	  }
 
 
