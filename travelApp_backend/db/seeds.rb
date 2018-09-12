@@ -19,7 +19,7 @@ pics = [
   "https://loremflickr.com/g/320/240/thaifood"
 ]
 
-thailand = Journey.create(name:"Thailand", traveler:alex, pics:pics, overview:"This was an awesome trip", date:date)
+thailand = Journey.create(name:"Thailand", traveler:alex, pics:pics, overview:"Elephants, food, and friends all in one place", date:date)
 
 
 Location.create(name:"Bangkok", journey:thailand, journal_entry:"City like", visit_frequency:"22", coordinates:{lat:"13.7563", lng:"100.5018"})
@@ -35,5 +35,5 @@ pics = [
   "https://loremflickr.com/g/320/240/mezcal"
 ]
 mexico = Journey.create(name:"Mexico City & Oaxaca", traveler:alex, pics:pics, overview:"This was an awesome trip", date:date)
-Location.create(name:"Mexico City", journey:mexico, journal_entry:"EAT EAT EAT", visit_frequency:"22", coordinates:{lat:"19.4326", lng:"99.1332"})
-Location.create(name:"Oaxaca", journey:mexico, journal_entry:"Mezcal!!!", visit_frequency:"30", coordinates:{lat:"17.0732", lng:"96.7266"})
+Location.create(name:"Mexico City", journey:mexico, journal_entry:"EAT EAT EAT", visit_frequency:"22", coordinates:{lat:"19.4326", lng:"-99.1332"})
+Location.create(name:"Oaxaca", journey:mexico, journal_entry:"Mezcal!!!", visit_frequency:"30", coordinates:{lat:"17.0732", lng:"-96.7266"})
