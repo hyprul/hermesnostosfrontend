@@ -7,6 +7,7 @@ class InfoWindow {
     this.content = content;
     this.picture_url = picture_url;
     this.title = title;
+    this.open = false;
     this.google = this.initialize();
     InfoWindow.all.push(this.google);
   }
@@ -20,7 +21,7 @@ class InfoWindow {
   render() {
     return (
       `<div class="row">
-      <div class="col s12 m7">
+      <div class="col s12 m12">
         <div class="card">
           <div class="card-image">
             <img src="${this.picture_url}">
@@ -40,3 +41,5 @@ class InfoWindow {
 }
 
 InfoWindow.all = [];
+
+

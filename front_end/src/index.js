@@ -12,7 +12,10 @@ const home = document.getElementById('home');
 //Event Listener for Delegation
 home.addEventListener('click', handleClick);
 
+var elems = document.querySelector('.modal');
 
+//fetch(".././terms.txt").then((resp) => {debugger;document.querySelector('#terms').innerHTML = resp.responseText})
+M.Modal.init(elems, {})
 
 //Instantiate Traveler
 
@@ -92,14 +95,38 @@ function createElements(data){
 
 
 
-
-
-
-
-
-
 //Event Delegation
 function handleClick(e){
+	//e.preventDefault();
 	//debugger
+	let submitbutton = e.target.id === "confirmterms"
+
+
+	if(submitbutton){
+		//debugger
+		let name = document.querySelector("#name").value;
+		let age = document.querySelector('#age').value;
+		let picurl = document.querySelector('#picurl').value;
+
+
+	fetch(TRAVELERS_URL,{
+		method: "POST",
+		headers: {
+            'Accept': 'application/json',
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+           name: name,
+           age: age,
+		   picture_url : picurl
+        })
+	})
+
+
+	location.reload();
+
+		//debugger
+	}
+	
 	//window.alert("hello")
 }
