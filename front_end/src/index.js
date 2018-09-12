@@ -30,7 +30,53 @@ home.addEventListener('click', handleClick);
 
 //Fetch Everything
 //var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+
+
+let blah = new Map({center: {lat: 15.8700, lng: 100.9925}});
+ 
+blah.attachToDom();
+//blah.createMarker({position: {lat: 15.8700, lng: 100.9925}, title: "BLAH"})
+
 fetch(TRAVELERS_URL).then(resp => resp.json()).then(data => createElements(data[0]));
+
+
+// //must have all Traveler fields or API will reject
+// fetch("http://localhost:3000/travelers",{
+// 	method: "POST",
+// 	headers: {
+//             'Accept': 'application/json',
+//             "Content-Type": "application/json"
+//         },
+
+//         body: JSON.stringify({
+//            name:"sean",
+//            age: 26,
+// 		   picture_url :"image here"
+//         })
+// }).then(res => res.json()).then(console.log)
+
+
+// //Patch will take only what you want to update
+// fetch("http://localhost:3000/travelers/2",{
+// 	method: "PATCH",
+// 	headers: {
+//             'Accept': 'application/json',
+//             "Content-Type": "application/json"
+//         },
+
+//         body: JSON.stringify({
+// 			name:4,
+//            age: 26
+//         })
+// }).then(res=>res.json()).then(console.log)
+
+// //and Delete
+// fetch("http://localhost:3000/travelers/2",{
+// 	method: "DELETE",
+// }).then(res=>res.json()).then(console.log)
+
+
+
 
 
 function createElements(data){
@@ -43,6 +89,11 @@ function createElements(data){
 	//debugger
 	//return traveler.attachToDom();
 }
+
+
+
+
+
 
 
 
