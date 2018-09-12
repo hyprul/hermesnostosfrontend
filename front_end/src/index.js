@@ -37,7 +37,7 @@ let blah = new Map({center: {lat: 15.8700, lng: 100.9925}});
 blah.attachToDom();
 //blah.createMarker({position: {lat: 15.8700, lng: 100.9925}, title: "BLAH"})
 
-fetch(TRAVELERS_URL).then(resp => resp.json()).then(data => createElements(data[0]));
+fetch(TRAVELERS_URL+`/1`).then(resp => resp.json()).then(data => createElements(data));
 
 
 // //must have all Traveler fields or API will reject
