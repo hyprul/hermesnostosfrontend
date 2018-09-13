@@ -7,14 +7,14 @@ class TravelerSerializer < ActiveModel::Serializer
 
   def journeys
     self.object.journeys.map do |journey|
-      {id: journey.id,
+      {journeyId: journey.id,
       name: journey.name,
       pics: journey.pics,
       overview: journey.overview,
       date: journey.date,
       locations: journey.locations.map do |location|
         {
-            id: location.id,
+            locationId: location.id,
             name: location.name,
             coordinates: location.coordinates,
             journalEntry: location.journal_entry,

@@ -12,7 +12,6 @@ class JourneysController < ApplicationController
 
   def create
     journey = Journey.new(journey_params);
-    byebug
     if journey.save
       render json: journey
     else
@@ -41,7 +40,7 @@ class JourneysController < ApplicationController
   private
 
   def journey_params
-    params.require(:journey).permit(:traveler_id, :pics, :overview, :date, :name)
+    params.require(:journey).permit(:traveler_id, :overview, :date, :name, pics: [])
   end
 
 end
