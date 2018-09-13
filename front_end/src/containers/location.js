@@ -1,14 +1,14 @@
 class Location {
 
 	constructor({
-	    id,
+	    locationId,
 	    name,
 	    coordinates,
 	    journalEntry,
 	    visit_frequency,
 	    journey_id
 	  } = {}) {
-	  	this.id = id;
+	  	this.id = locationId;
 	  	this.name = name;
 	    this.coordinates = coordinates;
 	    this.journal_entry = journalEntry;
@@ -22,7 +22,7 @@ class Location {
 	}
 
 	render(){
-		
+
 		let {coordinates: {lat, lng}, name } = this;
 		[lat, lng] = [lat * 1, lng * 1];
 		// let title = this.name
