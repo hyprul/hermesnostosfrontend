@@ -1,14 +1,14 @@
 class Journey {
 
 	constructor({
-	    id,
+	    journeyId,
 	    pics,
 	    name,
 	    overview,
 	    locations = [],
 	    traveler_id
 	  } = {}) {
-	    this.id = id;
+	    this.id = journeyId;
 	    this.name = name;
 	    this.pics = pics;
 	    this.overview = overview;
