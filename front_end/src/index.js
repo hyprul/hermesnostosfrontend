@@ -100,7 +100,7 @@ function handleClick(e){
 	//e.preventDefault();
 	//debugger
 	let submitbutton = e.target.id === "confirmterms"
-
+	let journeytab = e.target.parentElement.className === "tab col s2"
 
 	if(submitbutton){
 		//debugger
@@ -126,7 +126,32 @@ function handleClick(e){
 	location.reload();
 
 		//debugger
+	}//end of submit button
+
+
+	if(journeytab){
+		//debugger
+		if(e.target.parentElement.id === "testtab"){
+			blah = new Map({center: {lat: 15.8700, lng: 100.9925}});
+			blah.attachToDom();
+			traveler.journeys.forEach(function(journey){
+				journey.render()
+			})
+
+		}else{
+			let id = e.target.parentElement.id[4]
+			//traveler.journeys[id-1].locations[0].coordinates
+			//debugger
+			blah = new Map({center: {lat: parseFloat(traveler.journeys[id-1].locations[0].coordinates.lat), lng: parseFloat(traveler.journeys[id-1].locations[0].coordinates.lng)}});
+			blah.attachToDom();
+			//l
+			traveler.journeys[id-1].render()
+		}
+		//debugger
 	}
+
+
+
 	
 	//window.alert("hello")
 }

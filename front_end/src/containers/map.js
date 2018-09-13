@@ -30,14 +30,32 @@ class Map {
 
   createMarker(marker) {
     // marker = { position: { lat:, lng:  }, title: }
-    return new Marker(marker);
+    let newmark = new Marker(marker);
+    //markers.push(newmark)
+    return newmark
   }
 
   createInfoWindow(infoWindow) {
     // info_window = { content, picture_url, title  }
     return new InfoWindow(infoWindow);
   }
+
+
+        setMapOnAll(map) {
+        for (var i = 0; i < markers.length; i++) {
+          debugger
+          markers[i].setMap(map);
+        }
+      }
+
+      // Removes the markers from the map, but keeps them in the array.
+      clearMarkers() {
+        this.setMapOnAll(null);
+      }
+
+
 }
 
 var map;
 var $map = document.getElementById('map');
+//var markers = [];
