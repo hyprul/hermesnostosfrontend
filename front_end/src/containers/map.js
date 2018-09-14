@@ -143,8 +143,8 @@ handleMapRightClick(map) {
               })
       })
     //debugger
-    marker.setMap(null);
-    location.reload();
+    //marker.setMap(null);
+    //location.reload();
   }
 
 
