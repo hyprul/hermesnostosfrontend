@@ -70,21 +70,21 @@
         <img src="img/resort5.jpg"> <!-- random image -->
         <div class="caption center-align">
           <h2>Nostalgia. It's delicate, but potent.</h2>
-          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, veritatis!</h5>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only">It’s a twinge in your heart far more powerful than memory alone.</h5>
         </div>
       </li>
       <li>
         <img src="img/resort4.jpg"> <!-- random image -->
         <div class="caption left-align">
           <h2>Life is a journey.</h2>
-          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, eveniet.</h5>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only">It goes backwards, and forwards… it takes us to a place where we ache to go again.</h5>
         </div>
       </li>
       <li>
         <img src="img/resort3.jpg"> <!-- random image -->
         <div class="caption right-align">
           <h2>Embrace the wind.</h2>
-          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Here's our small slogan.</h5>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only">It let’s us travel the way a child travels - around and around, and back home again, to a place where we know are loved.</h5>
         </div>
       </li>
     </ul>
@@ -463,7 +463,32 @@
         </div>
       </div>
     </section>
+    
+      <div id="new_memory_modal" class="modal bottom-sheet">
+    <div class="modal-content">
+      <form class="col s12">
+        <div class="row">
 
+          <div class="input-field col s6">
+            <input id="title-input" type="text" class="validate">
+            <label for="title">Title</label>
+          </div>
+
+          <div id="add-select-options" class="input-field col s6">
+          </div>
+
+          <div class="input-field col s10">
+            <textarea id="memory-input" class="materialize-textarea"></textarea>
+            <label for="memory">Memories</label>
+          </div>
+
+          <div class="col s2">
+            <a onclick="Map.sendData()" class="btn-floating btn-large waves-effect pulse waves-light red"><i class="material-icons">add</i></a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 
 
 
@@ -528,7 +553,7 @@
 <!-- 
     Class Scripts -->
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXq9_AybcMZ86iP5enHEcjhCVovv65D00&libraries=geometry,places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=geometry,places"></script>
     <script src="./src/containers/info_window.js"></script>
     <script src="./src/containers/marker.js "></script>
     <script src="./src/containers/map.js"></script>

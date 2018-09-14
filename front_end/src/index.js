@@ -12,7 +12,7 @@ const home = document.getElementById('home');
 //Event Listener for Delegation
 home.addEventListener('click', handleClick);
 
-var elems = document.querySelector('.modal');
+var elems = document.querySelectorAll('.modal');
 
 //fetch(".././terms.txt").then((resp) => {debugger;document.querySelector('#terms').innerHTML = resp.responseText})
 M.Modal.init(elems, {})

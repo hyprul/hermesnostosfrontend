@@ -20,10 +20,10 @@ class InfoWindow {
 
   render() {
     return (
-      `<div class="row">
-      <div class="col s12 m12">
+      `
+      <div class="col s8 l8">
         <div class="card">
-          <div class="card-image">
+          <div class="card-image container">
             <img src="${this.picture_url}">
             <span class="card-title">${this.title}</span>
           </div>
@@ -31,11 +31,10 @@ class InfoWindow {
             <p>${this.content}</p>
           </div>
           <div class="card-action">
-            <a href="#">This is a link</a>
+            <a href="#">Hermès Nostos</a>
           </div>
         </div>
-      </div>
-    </div>`
+      </div>`
     );
   }
 }

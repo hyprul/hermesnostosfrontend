@@ -49,11 +49,12 @@ class Traveler {
 
 
 		return `
-		      <div class="col s12 m8 offset-m2 l6 offset-l3">
+		<div class="col s12 m8 offset-m2 l6 offset-l3">
         <div class="card-panel grey lighten-5 z-depth-1">
           <div class="row valign-wrapper">
                       <div class="col s10">
               <span class="black-text">
+              	<h5 style="color:crimson">Hermès Nostos, a home for all your journeys.</h5>
                 These are the memories of Don Draper, Don Corleone, and Leonardo Dicaprio.
               </span>
             </div>
