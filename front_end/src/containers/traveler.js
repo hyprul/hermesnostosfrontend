@@ -38,7 +38,7 @@ class Traveler {
 		// <div class="container">
 		// <h3 style="font-weight:bold">${this.name}</h4>
 		// <img src=${this.picture_url} class="circle responsive-img">
-		
+
 		// </div>`
 
 		this.journeys.forEach(function(journey){
@@ -70,7 +70,7 @@ class Traveler {
           </div>
         </div>
       </div>
-            
+
 		`
 
 		// return `
