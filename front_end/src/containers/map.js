@@ -15,6 +15,7 @@ class Map {
       center: this.center,
       zoom: this.zoom
     });
+    this.handleMapRightClick(map);
   }
 
   // Uses the methods below to attach a listener to Marker
@@ -38,6 +39,18 @@ class Map {
   createInfoWindow(infoWindow) {
     // info_window = { content, picture_url, title  }
     return new InfoWindow(infoWindow);
+  }
+
+  // New Method
+handleMapRightClick(map) {
+    map.addListener('rightclick', e => {
+      let position = new google.maps.LatLng(e.latLng.lat(), e.latLng.lng());
+      let marker = new google.maps.Marker({
+        position,
+        map,
+        title: 'whatever'
+      });
+    });
   }
 
 

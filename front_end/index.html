@@ -109,7 +109,8 @@
           <li class="tab col s2" id="test2tab"><a href="#test2" style="color:black">Seoul, Korea</a></li>
           <li class="tab col s2" id="test3tab"><a href="#test3" style="color:black">Paris, France</a></li>
           <li class="tab col s2" id="test4tab"><a href="#test4" style="color:black">Tokyo, Japan</a></li>
-           <li class="tab col s2" id="test5tab"><a href="#test5" style="color:black">Malaysia</a></li>
+          <button data-target="modal2" class="btn tab col s2 modal-trigger" style="background-color:black">New Journey</button>
+          <!--  <li class="tab col s2" id="test5tab"><a href="#test5" style="color:blue">Add Journey</a></li> -->
         </ul>
       </div>
       <div id="test" class="col s12">Showing All</div>
@@ -117,10 +118,48 @@
       <div id="test2" class="col s12">Test 2</div>
       <div id="test3" class="col s12">Test 3</div>
       <div id="test4" class="col s12">Test 4</div>
-      <div id="test5" class="col s12">Test 5</div>
+      <!-- <div id="addjourney" class="col s12">Test 5</div> -->
     </div>
     </div>
   </section>
+
+
+
+<!--   New Journey Modal -->
+  <div id="modal2" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Create New Journey</h4>
+       <div class="input-field">
+                <i class="material-icons prefix">account_circle</i>
+                <input id = "journeyname" type="text" placeholder="Name">
+              </div>
+              <div class="input-field">
+                <i class="material-icons prefix">date_range</i>
+                <input id = "journeydate" type="text" placeholder="Date">
+              </div>
+              <div class="input-field">
+                <i class="material-icons prefix">camera</i>
+                <input id = "journeypicurl1" type="text" placeholder="Picture URL(optional)">
+              </div>
+              <div class="input-field">
+                <i class="material-icons prefix">camera</i>
+                <input id = "journeypicurl2" type="text" placeholder="Picture URL(optional)">
+              </div>
+                 <div class="input-field">
+                <i class="material-icons prefix">camera</i>
+                <input id = "journeypicurl3" type="text" placeholder="Picture URL(optional)">
+              </div>
+              <div class="input-field">
+                <i class="material-icons prefix">mode_edit</i>
+                <textarea class="materialize-textarea" id ="journeyoverview" placeholder="Enter Overview"></textarea>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id = "createjourney" class="modal-close waves-effect waves-green btn-flat">Create</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+  </div>
+
 
     <!-- MAP -->
     <div id="map" style="height: 600px; margin: 0; padding: 0; width: 100%;"></div>
@@ -403,8 +442,13 @@
 
 
               <h4>Contact Us</h4>
+              <p>If you have any questions about these Terms, please contact us.</p>
+              <p>Don't contact us.</p>
 
-              <p>If you have any questions about these Terms, please contact us.</p></p>
+
+              <h4>No drinking before 6am. Don't go to the 10th floor!</h4>
+
+              </p>
             </div>
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat" id = "confirmterms">Concur</a>
@@ -484,7 +528,7 @@
 <!-- 
     Class Scripts -->
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=geometry,places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXq9_AybcMZ86iP5enHEcjhCVovv65D00&libraries=geometry,places"></script>
     <script src="./src/containers/info_window.js"></script>
     <script src="./src/containers/marker.js "></script>
     <script src="./src/containers/map.js"></script>

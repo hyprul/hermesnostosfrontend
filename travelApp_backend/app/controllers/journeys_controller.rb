@@ -12,7 +12,6 @@ class JourneysController < ApplicationController
 
   def create
     journey = Journey.new(journey_params);
-    byebug
     if journey.save
       render json: journey
     else

@@ -98,9 +98,13 @@ function createElements(data){
 //Event Delegation
 function handleClick(e){
 	//e.preventDefault();
-	//debugger
+	
 	let submitbutton = e.target.id === "confirmterms"
 	let journeytab = e.target.parentElement.className === "tab col s2"
+	let createJourney = e.target.id === "createjourney"
+
+
+	//debugger
 
 	if(submitbutton){
 		//debugger
@@ -148,6 +152,36 @@ function handleClick(e){
 			traveler.journeys[id-1].render()
 		}
 		//debugger
+	}
+
+
+	if(createJourney){
+		let journeyname = document.querySelector("#journeyname").value;
+		let journeydate = document.querySelector("#journeydate").value;
+		let journeypicurl1 = document.querySelector("#journeypicurl1").value;
+		let journeypicurl2 = document.querySelector("#journeypicurl2").value;
+		let journeypicurl3 = document.querySelector("#journeypicurl3").value;
+		let journeyoverview = document.querySelector("#journeyoverview").value;
+
+
+		fetch(JOURNEYS_URL,{
+			method: "POST",
+			headers: {
+		            'Accept': 'application/json',
+		            "Content-Type": "application/json"
+		        },
+
+		        body: JSON.stringify({
+		           name : journeyname,
+		           pics :[journeypicurl1, journeypicurl2, journeypicurl3],
+				   overview : journeyoverview,
+				   date : journeydate,
+				   traveler_id : 1
+		        })
+		})//end of fetch
+
+
+		location.reload();
 	}
 
 
